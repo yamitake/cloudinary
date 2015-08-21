@@ -41,5 +41,9 @@ module SampleHeroku
       :user_name => ENV["SMTP_USER_NAME"] ,
       :password => ENV["SMTP_USER_PASSWORD"]
     }
+
+    config.action_dispatch.default_headers = {
+      'X-Frame-Options' => 'ALLOWALL'
+    }
   end
 end
